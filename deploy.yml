@@ -1,4 +1,5 @@
-- hosts: ubuntu
+---
+- hosts: localhost
   become: yes
   tasks:
   - name: update and install apache
@@ -34,4 +35,3 @@
       name: apache2
       enabled: yes
       state: started 
-	  
