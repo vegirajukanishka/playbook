@@ -1,4 +1,5 @@
-- hosts: ubuntu
+---
+- hosts: localhost
   become: yes
   tasks:
   - name: update and install apache
