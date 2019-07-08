@@ -7,8 +7,8 @@
       name: apache2
       state: present
       update_cache: yes
-  notify:
-  - start apache
+    notify:
+    - start apache
   - name: installing php packages
     apt:
       name: "{{ item }}"
@@ -19,8 +19,8 @@
      - php-mcrypt
      - php-mysql
      - php-cli
-  notify:
-  - restart apache
+    notify:
+    - restart apache
   - name: copy php
     copy:
       src: info.php
